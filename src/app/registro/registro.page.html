@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Fecha Nacimiento</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="fechaNacimiento"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Sexo</ion-label>
+      <ion-select [(ngModel)]="sexo">
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="femenino">Femenino</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Profesion</ion-label>
+      <ion-select [(ngModel)]="profesion">
+        <ion-select-option value="ingeniero">Ingeniero</ion-select-option>
+        <ion-select-option value="medico">Médico</ion-select-option>
+        <ion-select-option value="abogado">Abogado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <!-- Agregar evento click -->
+  <ion-button expand="block" (click)="enviarDatos()">Enviar Datos</ion-button>
+
+</ion-content>
